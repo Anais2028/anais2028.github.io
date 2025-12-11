@@ -1,0 +1,24 @@
+
+:root{--bg:#a1a1da;--card:#fff;--accent:#b0247f;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:var(--bg); color:#0c0b0b}
+.container{max-width:900px;margin:24px auto; padding:16px}
+.header{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
+.header button{padding:6px 10px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day, .weekday{background:var(--card);padding:8px;border-radius:6px;min-height:80px;position:relative}
+.weekdays{grid-column: 1 / -1; display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-bottom:6px}
+.weekday{background:transparent;color:var(--muted);padding:4px;text-align:center;font-weight:600}
+.dayHeader{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.dayNumber{font-weight:700}
+.badge{background:var(--accent);color:#fff;padding:2px 6px;border-radius:999px;font-size:12px}
+.empty{opacity:.35}
+.day:hover{box-shadow:0 1px 4px rgba(0,0,0,.08);cursor:pointer}
+.panel{position:fixed;right:20px;top:80px;width:320px;background:var(--card);padding:12px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.hidden{display:none}
+.close{position:absolute;right:8px;top:6px;border:none;background:transparent;font-size:20px}
+.todo-list{list-style:none;margin:8px 0;padding:0;max-height:320px;overflow:auto}
+.todo-item{display:flex;justify-content:space-between;gap:8px;padding:8px;border-radius:6px;border:1px solid #eee;margin-bottom:6px}
+.todo-text{flex:1}
+.small-muted{font-size:12px;color:var(--muted)}
+@media (max-width:640px){ .panel{position:fixed;left:8px;right:8px;top:auto;bottom:20px;width:auto} }

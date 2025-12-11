@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo Calendar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <button id="prevMonth">&lt;</button>
+      <h1 id="monthLabel"></h1>
+      <button id="nextMonth">&gt;</button>
+    </header>
+
+    <section id="calendar" class="calendar"></section>
+
+    <aside id="todoPanel" class="panel hidden">
+      <button id="closePanel" class="close"></button>
+      <h2 id="panelDate"></h2>
+      <form id="todoForm">
+        <input id="todoInput" placeholder="New todo" autocomplete="off" />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todoList" class="todo-list"></ul>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
